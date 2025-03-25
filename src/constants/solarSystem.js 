@@ -1,0 +1,60 @@
+ src/constants/solarSystem.js
+
+export const solarSystem = [
+  {
+    name: "Mercury",
+    image: "/mercury.png",
+    orbitRadius: 100,
+    rotationDuration: 20,
+    size: 20,
+  },
+  {
+    name: "Venus",
+    image: "/venus.png",
+    orbitRadius: 150,
+    rotationDuration: 25,
+    size: 28,
+  },
+  {
+    name: "Earth",
+    image: "/earth.png",
+    orbitRadius: 200,
+    rotationDuration: 30,
+    size: 30,
+  },
+  {
+    name: "Mars",
+    image: "/mars.png",
+    orbitRadius: 250,
+    rotationDuration: 35,
+    size: 24,
+  },
+  {
+    name: "Jupiter",
+    image: "/jupiter.png",
+    orbitRadius: 320,
+    rotationDuration: 40,
+    size: 60,
+  },
+  {
+    name: "Saturn",
+    image: "/saturn.png",
+    orbitRadius: 400,
+    rotationDuration: 45,
+    size: 50,
+  },
+  {
+    name: "Uranus",
+    image: "/uranus.png",
+    orbitRadius: 470,
+    rotationDuration: 50,
+    size: 35,
+  },
+  {
+    name: "Neptune",
+    image: "/neptune.png",
+    orbitRadius: 540,
+    rotationDuration: 55,
+    size: 34,
+  },
+];

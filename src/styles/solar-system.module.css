@@ -1,0 +1,72 @@
+/* import from {}
+
+<Img src="/mercury.png" alt="mercury" />;
+   <Img src="/venus.png" alt="venus"  />
+   <Img src="/earth.png" alt="earth"  />
+   <Img src="/mars.png" alt="mars"  />
+   <Img src="/jupiter.png" alt="jupiter"  />
+   <Img src="saturn.png" alt="saturn"  />
+   <Img src="uranus.png" alt="uranus"  />
+   <Img src="neptune.png" alt="neptune"  /> */
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.solarSystem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; /* Adjust based on your needs */
+  height: 800px;
+  position: relative;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planet {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Add a glow effect to the sun */
+.sun {
+  position: relative;
+  z-index: 1;
+}
+
+.sun::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 165, 0, 0.6);
+  z-index: -1;
+}
