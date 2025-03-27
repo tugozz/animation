@@ -1,4 +1,4 @@
-import { solarSystem } from "@/constants/solarSystem"; // Make sure to create this
+import { solarSystem } from "@/constants/solarSystem";
 import styles from "@/styles/solar-system.module.css";
 import { BackgroundGalaxyImage, Orbit, Sun } from "@/components";
 
@@ -10,8 +10,8 @@ const Homepage = () => {
       <div className={styles.solarSystem}>
         <Sun />
 
-        {solarSystem.map((orbitValues) => (
-          <Orbit key={orbitValues.name} {...orbitValues} />
+        {solarSystem.map((orbit, index) => (
+          <Orbit key={index} {...orbit} />
         ))}
       </div>
     </div>

@@ -1,33 +1,37 @@
-import Image from "next/image";
 import styles from "@/styles/solar-system.module.css";
 
-export const Orbit = ({ name, image, orbitRadius, rotationDuration, size }) => {
+export const Orbit = ({
+  imageUrl,
+  orbit,
+  orbitPeriod,
+  planetSize,
+  rotationPeriod,
+}) => {
   return (
     <div
       className={styles.orbit}
       style={{
-        width: `${orbitRadius * 2}px`,
-        height: `${orbitRadius * 2}px`,
-        animation: `rotate ${rotationDuration}s linear infinite`,
+        width: orbit,
+        height: orbit,
+        "--orbit-period": orbitPeriod,
       }}
     >
-      <div className={styles.planet}>
-        <div
+      <div
+        className={styles.planet}
+        style={{
+          width: planetSize,
+          height: planetSize,
+          "--planet-period": rotationPeriod,
+        }}
+      >
+        <img
+          src={imageUrl}
+          alt=""
           style={{
-            position: "relative",
-            width: `${size}px`,
-            height: `${size}px`,
+            height: "100%",
+            width: "100%",
           }}
-        >
-          <Image
-            src={image}
-            alt={name}
-            fill
-            style={{
-              objectFit: "contain",
-            }}
-          />
-        </div>
+        />
       </div>
     </div>
   );
